@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Ubuntu',sans-serif;
+    background-color: rgb(215, 215, 215);
+}
+header{
+    padding: 0;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+}
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+ul li a{
+    padding: 0 20px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+li a::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #f5d700;
+    transition: all .5s;
+}
+li a:hover::after{
+    width: 100%;
+}
+button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+hr{
+    margin: 0;
+    border: 0;
+    height: 0;
+    box-shadow: 0 0 5px 1px;
+}
+
+main{
+    display: flex;
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+}
+.hero-img{
+    max-width: 670px;
+    height: auto;
+}
+.content-left{
+    width: 30%;
+    transition: width 2s;
+}
+.content-left:hover{
+    width: 35%;
+}
+.content-right img{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+main h1{
+    font-size: 54px;
+    color: #133b4f;
+}
+main h2{
+    font-size: 25px;
+    color: #fca70c;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+main p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #565656;
+    line-height: 31.5px;
+    margin: 30px 0;
+}
+.cta{
+    padding: 15px 30px;
+    background-color: #f5d700;
+    color: #404040;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+.signup-btn{
+    padding: 10px 20px;
+    background-color: #f5d700;
+    color: #404040;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+@media(max-width:320px){
+    body{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+    .content-left:hover{
+        width: 80%;
+    }
+    header{
+        height: 50px;
+    }
+    .hero-img{
+        display: none;
+    }
+    .signup-btn{
+        font-weight: 700;
+        border-radius: 50px;
+        font-size: xx-small;
+    }
+    .nav{
+        display: none;
+    }
+    .cta{
+        font-size: xx-small;
+        padding: 10px;
+
+    }
+    p{
+        font-size:7px;
+        letter-spacing: normal;
+    }
+
+    main{
+        height:600px;
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .content-right{
+        display: none;
+    }
+    .content-left{
+        justify-content: center;
+        align-items: center;
+        width: 200%;
+        font-size: x-small;
+    }
+    #sim{
+        width: 125px;
+    }
+    h1{
+        font-size: x-small;
+    }
+    p{
+        font-size: x-small;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 321px)and (max-width: 950px){
+    
+    header{
+        padding:1px;
+        width: 100%;
+        display: flex;
+        flex-direction: row ;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .nav{
+        display: none;
+    }
+    .content-left{
+        position: relative;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .hero-img{
+        width: 40vh;
+    }
+    .content-left:hover{
+        width: 80%;
+    }
+    main{
+        position: absolute;
+        top: 110px;
+        right: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media(min-width: 950px) and(max-width:1079px){
+
+    header{
+        width: 100%;
+    }
+}
